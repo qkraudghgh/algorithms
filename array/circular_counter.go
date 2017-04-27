@@ -11,7 +11,7 @@ package array
 
 import "fmt"
 
-func josepheus(int_list []int, skip int)  {
+func josepheus(int_list []int, skip int) {
 	skip -= 1
 	idx := 0
 	for len(int_list) > 0 {

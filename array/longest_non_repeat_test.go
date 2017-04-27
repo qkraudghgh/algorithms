@@ -1,8 +1,8 @@
 package array
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestLongestNonRepeatFunc(t *testing.T) {

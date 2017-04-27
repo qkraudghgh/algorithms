@@ -21,7 +21,7 @@ func longestNonRepeat(s string) int {
 		if ok && start <= used_char[char] {
 			start = used_char[char] + 1
 		} else {
-			temp := index-start+1
+			temp := index - start + 1
 			if maxlen < temp {
 				maxlen = temp
 			}
