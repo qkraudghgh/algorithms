@@ -13,6 +13,8 @@ func TestMergeIntervalsFunc(t *testing.T) {
 		{8, 10},
 		{15, 18},
 	}
+	fmt.Print("INPUT: ")
 	fmt.Println(temps)
+	fmt.Print("OUTPUT: ")
 	fmt.Println(merge(temps))
 }
