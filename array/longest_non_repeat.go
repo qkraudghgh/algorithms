@@ -17,18 +17,18 @@ package array
 
 func longestNonRepeat(s string) int {
 	var start, maxlen int
-	used_char := make(map[rune]int)
+	usedChar := make(map[rune]int)
 	for index, char := range s {
-		_, ok := used_char[char]
-		if ok && start <= used_char[char] {
-			start = used_char[char] + 1
+		_, ok := usedChar[char]
+		if ok && start <= usedChar[char] {
+			start = usedChar[char] + 1
 		} else {
 			temp := index - start + 1
 			if maxlen < temp {
 				maxlen = temp
 			}
 		}
-		used_char[char] = index
+		usedChar[char] = index
 	}
 	return maxlen
 }

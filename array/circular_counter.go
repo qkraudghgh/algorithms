@@ -13,13 +13,13 @@ package array
 
 import "fmt"
 
-func josepheus(int_list []int, skip int) {
+func josepheus(intList []int, skip int) {
 	skip -= 1
 	idx := 0
-	for len(int_list) > 0 {
-		idx = (skip + idx) % len(int_list)
-		fmt.Printf("%v", int_list[idx])
-		int_list = append(int_list[:idx], int_list[idx+1:]...) // pop
+	for len(intList) > 0 {
+		idx = (skip + idx) % len(intList)
+		fmt.Printf("%v", intList[idx])
+		intList = append(intList[:idx], intList[idx+1:]...) // pop
 	}
 }
 
@@ -28,18 +28,18 @@ the reason for hashing is that we have to find the index of the item which needs
 So for e.g. if you iterate with the initial list of folks with every 3rd item eliminated:
 
 INPUT
-int_list := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+intList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 skip := 3
 
 While Iteration:
 
-int_list = 123456789
-len(int_list) = 9
-skip = 2 # as int_list starts from 0
+intList = 123456789
+len(intList) = 9
+skip = 2 # as intList starts from 0
 idx = (0 + 2) % 9 #here previous index was 0
 so 3rd element which is 3 in this case eliminated
-int_list = 12456789
-len(int_list) = 8
+intList = 12456789
+len(intList) = 8
 idx = (2 + 2) % 8 #here previous index was 2
 so 3rd element starting from 4th person which is 6 would be deleted.
 and so on
