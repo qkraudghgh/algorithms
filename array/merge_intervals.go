@@ -19,9 +19,9 @@ type interval struct {
 
 type intervals []interval
 
-func (list intervals) Len() int               { return len(list) }
-func (list intervals) Less(i int, j int) bool { return list[i].start < list[j].start }
-func (list intervals) Swap(i int, j int)      { list[i], list[j] = list[j], list[i] }
+func (list intervals) Len() int           { return len(list) }
+func (list intervals) Less(i, j int) bool { return list[i].start < list[j].start }
+func (list intervals) Swap(i, j int)      { list[i], list[j] = list[j], list[i] }
 
 func merge(list intervals) intervals {
 	out := []interval{}

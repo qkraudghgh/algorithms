@@ -19,7 +19,7 @@ func rotate(nums []int, k int) {
 	reverse(nums, 0, n-1)
 }
 
-func reverse(slice []int, a int, b int) {
+func reverse(slice []int, a, b int) {
 	for a < b {
 		slice[a], slice[b] = slice[b], slice[a]
 		a += 1

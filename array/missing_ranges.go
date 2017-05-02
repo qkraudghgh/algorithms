@@ -10,7 +10,7 @@ import (
 	"strconv"
 )
 
-func missingRanges(nums []int, low int, high int) []string {
+func missingRanges(nums []int, low, high int) []string {
 	res := []string{}
 	start := low
 	for _, num := range nums {

@@ -28,7 +28,7 @@ import (
 	"reflect"
 )
 
-func garage(beg []int, end []int) int {
+func garage(beg, end []int) int {
 	i := 0
 	moves := 0
 	for !reflect.DeepEqual(beg, end) {
