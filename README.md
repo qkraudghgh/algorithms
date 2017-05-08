@@ -4,20 +4,26 @@
 
 Minimal and clean example implementations of data structures and algorithms in Golang.
 
+## How to run?
+```bash
+cd <want-algorithm-dir> # cd array
+go test -v
+```
+
 ## List of Implementations
 
-- [array](#golang-data-structure-and-algorithms)
-    - [ ] [circular_counter](#golang-data-structure-and-algorithms) 
-    - [ ] [flatten](#golang-data-structure-and-algorithms) 
-    - [ ] [garage](#golang-data-structure-and-algorithms) 
-    - [ ] [longest_non_repeat](#golang-data-structure-and-algorithms)
-    - [ ] [merge_intervals](#golang-data-structure-and-algorithms)
-    - [ ] [missing_ranges](#golang-data-structure-and-algorithms)
-    - [ ] [plus_one](#golang-data-structure-and-algorithms)
-    - [ ] [rotate_array](#golang-data-structure-and-algorithms)
-    - [ ] [summary_ranges](#golang-data-structure-and-algorithms)
-    - [ ] [three_sum](#golang-data-structure-and-algorithms)
-    - [ ] [two_sum](#golang-data-structure-and-algorithms)
+- [array](arrary)
+    - [x] [circular_counter](array/circular_counter.go) 
+    - [x] [flatten](array/flatten.go) 
+    - [x] [garage](array/garage.go) 
+    - [x] [longest_non_repeat](array/longest_non_repeat.go)
+    - [x] [merge_intervals](array/merge_intervals.go)
+    - [x] [missing_ranges](array/missing_ranges.go)
+    - [x] [plus_one](array/plus_one.go)
+    - [x] [rotate_array](array/rotate_slice.go)
+    - [x] [summary_ranges](array/summary_ranges.go)
+    - [x] [three_sum](array/three_sum.go)
+    - [x] [two_sum](array/two_sum.go)
 - [backtrack](#golang-data-structure-and-algorithms)
     - [ ] [general_solution.md](#golang-data-structure-and-algorithms)
     - [ ] [anagram](#golang-data-structure-and-algorithms)
