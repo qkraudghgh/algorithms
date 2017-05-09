@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestThreeSumFunc(t *testing.T) {
+func TestGenerateAbbreviationsFunc(t *testing.T) {
 	t.Log("Test Generate Abbreviations algorithm")
 	word := "word"
 	fmt.Println("INPUT: ", word)
