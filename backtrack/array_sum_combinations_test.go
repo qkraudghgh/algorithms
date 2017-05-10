@@ -12,4 +12,5 @@ func TestArraySumCombinationsFunc(t *testing.T) {
 	fmt.Println("INPUT: [], Target:", target)
 	fmt.Print("OUTPUT: ")
 	sumCombinationsBacktrack(&tempSlice, target)
+	fmt.Println()
 }
