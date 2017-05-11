@@ -10,6 +10,10 @@ cd <want-algorithm-dir> # cd array
 go test -v
 ```
 
+## Contributing?
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## List of Implementations
 
 - [array](arrary)

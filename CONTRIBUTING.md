@@ -2,6 +2,13 @@
 
 All PR and issues are welcome.
 
+## Where is Algorithm?
+
+There are two ways.
+
+1. Check this [Url](https://github.com/keon/algorithms)
+2. Check algorithms folder
+
 ## PR Rule
 
 Work one by one on a topic(or folder).
