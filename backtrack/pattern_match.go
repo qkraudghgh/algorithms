@@ -15,6 +15,8 @@ You may assume both pattern and str contains only lowercase letters.
 
 package backtrack
 
+import "github.com/qkraudghgh/algorithms/utils"
+
 func patternMatch(pattern string, str string) bool {
 	dic := make(map[byte]string)
 	return patternMatcher(pattern, str, &dic)
@@ -33,7 +35,7 @@ func patternMatcher(pattern string, str string, dic *map[byte]string) bool {
 	}
 	for i := 1; i < len(str)-len(pattern)+2; i++ {
 		if _, ok := tempdic[pattern[0]]; !ok {
-			if !existInMap(str[:i], tempdic) {
+			if !utils.FindStrByByteInMap(str[:i], tempdic) {
 				tempdic[pattern[0]] = str[:i]
 				if patternMatcher(pattern[1:], str[i:], dic) {
 					return true
@@ -46,15 +48,6 @@ func patternMatcher(pattern string, str string, dic *map[byte]string) bool {
 					return true
 				}
 			}
-		}
-	}
-	return false
-}
-
-func existInMap(str string, dic map[byte]string) bool {
-	for _, value := range dic {
-		if str == value {
-			return true
 		}
 	}
 	return false

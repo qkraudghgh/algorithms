@@ -12,7 +12,10 @@ Result:
 
 package backtrack
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/qkraudghgh/algorithms/utils"
+)
 
 type any []interface{}
 
@@ -59,11 +62,6 @@ func sumCombinationsBacktrack(constructedSofar *[]int, target int) {
 	for _, value := range candidates {
 		*constructedSofar = append(*constructedSofar, value)
 		sumCombinationsBacktrack(constructedSofar, target)
-		*constructedSofar = pop(*constructedSofar)
+		*constructedSofar = utils.Pop(*constructedSofar)
 	}
-}
-
-func pop(slice []int) []int {
-	slice = slice[:len(slice)-1]
-	return slice
 }

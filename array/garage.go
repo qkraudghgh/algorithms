@@ -22,10 +22,10 @@ Edited by cyberking-saga
 package array
 
 import (
-	"errors"
 	"fmt"
 	"log"
 	"reflect"
+	"github.com/qkraudghgh/algorithms/utils"
 )
 
 func garage(beg, end []int) int {
@@ -34,22 +34,22 @@ func garage(beg, end []int) int {
 	for !reflect.DeepEqual(beg, end) {
 		if beg[i] != 0 && beg[i] != end[i] {
 			car := beg[i]
-			empty, err := findElement(beg, 0)
+			empty, err := utils.FindInt(beg, 0)
 			if err != nil {
 				log.Fatal(err)
 			}
-			finalPos, err := findElement(end, beg[i])
+			finalPos, err := utils.FindInt(end, beg[i])
 			if err != nil {
 				log.Fatal(err)
 			}
 			if empty != finalPos {
 				beg[finalPos], beg[empty] = beg[empty], beg[finalPos]
 				fmt.Println(beg)
-				empty, err = findElement(beg, 0)
+				empty, err = utils.FindInt(beg, 0)
 				if err != nil {
 					log.Fatal(err)
 				}
-				carLotate, err := findElement(beg, car)
+				carLotate, err := utils.FindInt(beg, car)
 				if err != nil {
 					log.Fatal(err)
 				}
@@ -57,7 +57,7 @@ func garage(beg, end []int) int {
 				fmt.Println(beg)
 				moves += 2
 			} else {
-				carLotate, err := findElement(beg, car)
+				carLotate, err := utils.FindInt(beg, car)
 				if err != nil {
 					log.Fatal(err)
 				}
@@ -72,13 +72,4 @@ func garage(beg, end []int) int {
 		}
 	}
 	return moves
-}
-
-func findElement(list []int, element int) (int, error) {
-	for index, value := range list {
-		if value == element {
-			return index, nil
-		}
-	}
-	return -1, errors.New("Did not find Element.")
 }

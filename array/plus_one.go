@@ -8,6 +8,8 @@ digit is at the head of the list.
 
 package array
 
+import "github.com/qkraudghgh/algorithms/utils"
+
 func plusOne(digits []int) []int {
 	digits[len(digits)-1] = digits[len(digits)-1] + 1
 	res := []int{}
@@ -26,12 +28,5 @@ func plusOne(digits []int) []int {
 		i -= 1
 	}
 
-	return reverseInts(res)
-}
-
-func reverseInts(input []int) []int {
-	if len(input) == 0 {
-		return input
-	}
-	return append(reverseInts(input[1:]), input[0])
+	return utils.ReverseInts(res)
 }
